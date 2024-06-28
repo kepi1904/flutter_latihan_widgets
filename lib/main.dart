@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_widget/page_one.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -57,10 +58,10 @@ class _LatihanWidgetState extends State<LatihanWidget> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(controllerName.text.toString())));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const PageOne()));
                 },
-                child: const Text("Push Button")),
+                child: const Text("Go to Page One")),
             const SizedBox(
               height: 20,
             ),
