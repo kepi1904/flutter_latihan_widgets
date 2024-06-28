@@ -24,33 +24,49 @@ class _LatihanWidgetState extends State<LatihanWidget> {
         centerTitle: true,
       ),
       body: Center(
-          child: Column(
-        children: [
-          const Text(
-            "My Apps",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            height: 50,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30),
-            child: TextField(
-              controller: controllerName,
-              decoration: const InputDecoration(
-                  labelText: "Input Nama", border: OutlineInputBorder()),
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 50,
             ),
-          ),
-          const SizedBox(
-            height: 50,
-          ),
-          ElevatedButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text(controllerName.text.toString())));
-              },
-              child: const Text("Push Button"))
-        ],
+            const Icon(
+              Icons.car_rental,
+              size: 80,
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            const Text(
+              "My Apps",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: TextField(
+                controller: controllerName,
+                decoration: const InputDecoration(
+                    labelText: "Input Nama", border: OutlineInputBorder()),
+              ),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text(controllerName.text.toString())));
+                },
+                child: const Text("Push Button")),
+            const SizedBox(
+              height: 20,
+            ),
+            Image.asset('images/dora.jpeg')
+          ],
+        ),
       )),
     );
   }
