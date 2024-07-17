@@ -33,6 +33,9 @@ class _PageOneState extends State<PageOne> {
                 height: 100,
               ),
               Switch(value: isSelected, onChanged: toogleSwitch),
+              const SizedBox(
+                height: 100,
+              ),
               ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(

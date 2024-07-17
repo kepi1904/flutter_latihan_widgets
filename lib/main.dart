@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_widget/page_one.dart';
+import 'package:latihan_widget/expanded_test.dart';
+import 'package:latihan_widget/gridview.dart';
+import 'package:latihan_widget/list_tile.dart';
+
+import 'package:latihan_widget/navigation_bar.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -58,10 +62,10 @@ class _LatihanWidgetState extends State<LatihanWidget> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const PageOne()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ListileTest()));
                 },
-                child: const Text("Go to Page One")),
+                child: const Text("Go to List tile")),
             const SizedBox(
               height: 20,
             ),

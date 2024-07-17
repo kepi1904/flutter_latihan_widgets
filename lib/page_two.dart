@@ -10,81 +10,13 @@ class PageTwo extends StatefulWidget {
 }
 
 class _PageTwoState extends State<PageTwo> {
-  List dataList = [
-    {
-      "name": "Rudi",
-      "job": "flutter",
-    },
-    {
-      "name": "Budi",
-      "job": "flutter",
-    },
-    {
-      "name": "Hafid",
-      "job": "flutter",
-    },
-    {
-      "name": "Rangga",
-      "job": "flutter",
-    },
-    {
-      "name": "Desta",
-      "job": "flutter",
-    },
-    {
-      "name": "Desta",
-      "job": "flutter",
-    },
-    {
-      "name": "Naruto",
-      "job": "flutter",
-    },
-    {
-      "name": "Sasuke",
-      "job": "flutter",
-    },
-    {
-      "name": "Doraemon",
-      "job": "flutter",
-    },
-    {
-      "name": "Rudi",
-      "job": "flutter",
-    },
-    {
-      "name": "Budi",
-      "job": "flutter",
-    },
-    {
-      "name": "Hafid",
-      "job": "flutter",
-    },
-    {
-      "name": "Rangga",
-      "job": "flutter",
-    },
-    {
-      "name": "Desta",
-      "job": "flutter",
-    },
-    {
-      "name": "Desta",
-      "job": "flutter",
-    },
-    {
-      "name": "Naruto",
-      "job": "flutter",
-    },
-    {
-      "name": "Sasuke",
-      "job": "flutter",
-    },
-    {
-      "name": "Doraemon",
-      "job": "flutter",
-    }
+  List data = [
+    {"name": "Hafid", "job": "designer"},
+    {"name": "Hafid", "job": "designer"},
+    {"name": "Hafid", "job": "designer"},
+    {"name": "Hafid", "job": "designer"},
+    {"name": "Hafid", "job": "designer"}
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,23 +25,11 @@ class _PageTwoState extends State<PageTwo> {
           actions: const [],
         ),
         body: ListView.builder(
-            itemCount: dataList.length,
+            itemCount: data.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                title: SizedBox(
-                  height: 60,
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(dataList[index]['name']),
-                          Text(dataList[index]['job'])
-                        ],
-                      ),
-                    ),
-                  ),
+              return Card(
+                child: ListTile(
+                  title: Text(data[index]['name']),
                 ),
               );
             }));
