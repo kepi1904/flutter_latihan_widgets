@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_widget/expanded_test.dart';
-import 'package:latihan_widget/gridview.dart';
-import 'package:latihan_widget/list_tile.dart';
-
-import 'package:latihan_widget/navigation_bar.dart';
+import 'package:latihan_widget/radio_button.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -63,9 +59,9 @@ class _LatihanWidgetState extends State<LatihanWidget> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ListileTest()));
+                      builder: (context) => const RadioButtonTest()));
                 },
-                child: const Text("Go to List tile")),
+                child: const Text("Go to Radio Button")),
             const SizedBox(
               height: 20,
             ),
