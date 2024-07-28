@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_widget/image_slider.dart';
 import 'package:latihan_widget/radio_button.dart';
 
 void main() {
@@ -59,9 +60,9 @@ class _LatihanWidgetState extends State<LatihanWidget> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const RadioButtonTest()));
+                      builder: (context) => const ImageSliderTest()));
                 },
-                child: const Text("Go to Radio Button")),
+                child: const Text("Go to Image Slider")),
             const SizedBox(
               height: 20,
             ),
